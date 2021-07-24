@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  margin: 100px;
+}
+
+.userSpan {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  position: relative;
+  margin-left: 100px;
+  text-transform: uppercase;
+}
+
+.username,
+.password {
+  padding-top: 25px;
+}
+
+.btnn {
+  margin-top: 10px;
+  width: 20rem;
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "value": "--Select Package-",
+        "price": " "
+    },
+    {
+        "id": 1,
+        "value": "Small car",
+        "price": 10000 
+    },
+    {
+        "id": 2,
+        "value": "Meduim",
+        "price": 15000  
+    },
+    {
+        "id": 3,
+        "value": "Full wash",
+        "price": 20000 
+    },
+    {
+        "id": 4,
+        "value": "Boda-boda",
+        "price": 5000 
+    },
+    {
+        "id": 5,
+        "value": "Engine",
+        "price": 10000 
+    }
+]

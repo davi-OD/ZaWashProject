@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-vehicle {
+  padding: 100px;
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: coral; */
+}
+
+.btn-backV,
+.btn-saveV {
+  margin-top: 10px;
+  width: 20rem;
+}
+
+.Err {
+  font-size: 15px;
+  color: red;
+}

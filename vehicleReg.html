@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="vehicle.css">
+    <script src="packageData.js" defer></script>
+    <script src="validation.js" defer></script>
+    <title>Vehicle Register</title>
+</head>
+<body>
+    <div class="container-vehicle">
+        <form action="" method="GET" name="vehicleReg">
+        <div class="car-plate">
+            <label for="numberPlate">Number Plate</label>
+            <input type="text" name="number_plate" id="numPlate" class="form-control">
+            <span id="num_PlateEr" class="Err"></span>
+        </div>
+        <div class="carColor">
+            <label for="car_color">Color</label>
+            <input type="text" name="car_Color" id="car_Color" class="form-control">
+            <span id="colorEr" class="Err"></span>
+        </div>
+        <div class="time">
+            <label for="arrivalTime">Time</label>
+            <input type="time" name="time" id="time" class="form-control">
+            <span id="timeAEr" class="Err"></span>
+        </div>
+        <div class="date">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" class="form-control">
+            <span id="dateAEr" class="Err"></span>
+        </div>
+        <div class="make">
+            <label for="makee">Make</label>
+            <input type="text" name="make_Vehicle" id="makeV" class="form-control">
+            <span id="makeEr" class="Err"></span>
+        </div>
+        <div class="type">
+            <label for="type">Type</label>
+            <input type="text" name="type_Vehicle" id="typeV" class="form-control">
+            <span id="typeEr" class="Err"></span>
+        </div>
+        <div class="package-wash">
+            <label for="packageWash">Package Of Wash</label>
+            <select name="package" id="package" class="form-select">
+    
+            </select>
+            <span id="packEr" class="Err"></span>
+        </div>
+        <div class="assignTo">
+            <label for="assigned">Assign To</label>
+            <input type="text" name="assign_To" id="assign" class="form-control">
+           <span id="assignEr" class="Err"></span>
+        </div>
+        <div class="btn-backV">
+            <button class="btn btn-success" type="submit">Back</button>
+        </div>
+        <div class="btn-saveV">
+            <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
+

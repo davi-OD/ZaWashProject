@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="washer.css">
+    <script src="validation.js" defer></script>
+    <title>Washer Register</title>
+</head>
+<body>
+    <div class="container-washer">    
+        <form action="" method="GET" name="washerInfo">
+        <div class="name_W">
+            <label for="name">Name</label>
+            <input type="text" name="washer_name" id="washeNombre" class="form-control">
+            <span id="nameEr" class="Err"></span>
+        </div>
+        <div class="person_info">
+            <div class="genDr">
+                <label for="gender">Gender</label>
+                <select name="gender" id="genderWasher" class="form-select">
+                    <option value="-select-">--Select Gender--</option>
+                    <option value="male">M</option>
+                    <option value="female">F</option>
+                </select>
+            <span id="genderEr" class="Err"></span>
+            </div>
+            <div class="dateBirth">
+                <label for="dob">Date Of Birth</label>
+                <input type="date" name="dob" id="dobWasher" class="form-control">
+                <span id="birthDEr" class="Err"></span>
+            </div>
+            <div class="id">
+                <label for="nin">National ID</label>
+                <input type="text" name="nin" id="ninWasher" class="form-control">
+                <span id="ninEr" class="Err"></span>
+            </div>
+            <div class="residence_W">
+                <label for="residence">Place Of Residence</label>
+                <input type="text" name="residence" id="residenceWasher" class="form-control">
+                <span id="residenceEr" class="Err"></span>
+            </div>
+            <div class="workID">
+                <label for="ID">Employment ID</label>
+                <input type="text" name="id" id="employmentID" class="form-control">
+                <span id="idEr" class="Err"></span>
+            </div>
+        </div>
+        <div class="btn-back">
+            <button class="btn btn-success" type="submit">Back</button>
+        </div>
+        <div class="btn-save">
+            <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+        </form>
+    </div>
+    <script src="washerValidate.js"></script>
+</body>
+</html>

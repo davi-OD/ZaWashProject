@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-washer {
+  padding: 100px;
+  margin: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-back,
+.btn-save {
+  margin-top: 10px;
+  width: 20rem;
+}
+
+.Err {
+  font-size: 15px;
+  color: red;
+}

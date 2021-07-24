@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-user {
+  padding: 100px;
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-name,
+.last-name,
+.user-name,
+.pass_word {
+  padding-top: 10px;
+}
+
+.btun {
+  margin-top: 10px;
+  width: 20rem;
+}
