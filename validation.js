@@ -14,6 +14,7 @@ const nameRegex = /([A-Za-z]){1,16}/;
 const residenceRegex = /([A-Za-z]){1,20}/;
 const moreRegex = /([A-Za-z]){5,50}/;
 const newRegex = /([A-Z][a-z])/;
+const idRegex = /^[a-zA-Z0-9_]*$/;
 
 
 //Errors
@@ -59,7 +60,7 @@ var numb_Plate = () => {
         numP.focus();
         return false;
     }
-    if (numP.value.match(nameRegex)) {
+    if (numP.value.match(idRegex)) {
         return true;
     }else{
         numP.style.border = '2px solid red'
