@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    //- link(rel='stylesheet' href='./css/bootstrap.min.css')
+    //- link(rel='stylesheet' href='vehicle.css')
+    style 
+      include ../public/css/css/bootstrap.min.css
+      include ../public/css/vehicle.css
+    //- script(src='packageData.js' defer='')
+    //- script(src='validation.js' defer='')
+  
+    title Vehicle Register
+  body
+    .container-vehicle
+      form(action='/vehicles/vehicleRegister' method='GET' name='vehicleReg')
+        .car-plate
+          label(for='numberPlate') Number Plate
+          input#numPlate.form-control(type='text' name='number_plate')
+          span#num_PlateEr.Err
+        .carColor
+          label(for='car_color') Color
+          input#car_Color.form-control(type='text' name='car_Color')
+          span#colorEr.Err
+        .time
+          label(for='arrivalTime') Time
+          input#time.form-control(type='time' name='time')
+          span#timeAEr.Err
+        .date
+          label(for='date') Date
+          input#date.form-control(type='date' name='date')
+          span#dateAEr.Err
+        .make
+          label(for='makee') Make
+          input#makeV.form-control(type='text' name='make_Vehicle')
+          span#makeEr.Err
+        .type
+          label(for='type') Type
+          input#typeV.form-control(type='text' name='type_Vehicle')
+          span#typeEr.Err
+        .package-wash
+          label(for='packageWash') Package Of Wash
+          select#package.form-select(name='package')
+          span#packEr.Err
+        .assignTo
+          label(for='assigned') Assign To
+          input#assign.form-control(type='text' name='assign_To')
+          span#assignEr.Err
+        .btn-backV
+          button.btn.btn-success(type='submit') Back
+        .btn-saveV
+          button.btn.btn-primary(type='submit') Save
+    //- script(src='../public/js/packageData.js')
+    //- script(src='validation.js')
+    script 
+      include ../public/js/packageData.js
+      include ../public/js/validation.js

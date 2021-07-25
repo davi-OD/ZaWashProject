@@ -1,0 +1,51 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		//- link(rel='stylesheet' href='./css/bootstrap.min.css')
+		//- link(rel='stylesheet' href='washer.css')
+		style 
+			include ../public/css/css/bootstrap.min.css
+			include ../public/css/washer.css
+			
+		//- script(src='washerValidate.js' defer)
+		title Washer Register
+	body
+		.container-washer
+			form(action='/washers/washerRegister' method='GET' name='washerInfo')
+				div(class='name_W')
+					label(for='name') Name
+					input#washeNombre.form-control(type='text' name='washer_name')
+					span#nameEr.Err
+				div(class='person_info')
+					.genDr
+						label(for='gender') Gender
+						select#genderWasher.form-select(name='gender')
+							option(value='-select-') --Select Gender--
+							option(value='male') M
+							option(value='female') F
+						span#genderEr.Err
+					.dateBirth
+						label(for='dob') Date Of Birth
+						input#dobWasher.form-control(type='date' name='dob')
+						span#birthDEr.Err
+					.id
+						label(for='nin') National ID
+						input#ninWasher.form-control(type='text' name='nin')
+						span#ninEr.Err
+					div(class='residence_W')
+						label(for='residence') Place Of Residence
+						input#residenceWasher.form-control(type='text' name='residence')
+						span#residenceEr.Err
+					.workID
+						label(for='ID') Employment ID
+						input#employmentID.form-control(type='text' name='id')
+						span#idEr.Err
+				.btn-back
+					button.btn.btn-success(type='submit') Back
+				.btn-save
+					button.btn.btn-primary(type='submit') Save
+		script 
+			include ../public/js/washerValidate.js

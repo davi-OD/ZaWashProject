@@ -1,5 +1,10 @@
 //Dependencies
 const express = require('express');
+const homeRoutes = require('./routes/homeRoutes');
+const loginRoutes = require('./routes/loginRoutes');
+const userRoutes = require('./routes/userRoutes');
+const vehicleRoutes = require('./routes/vehicleRoutes');
+const washerRoutes = require('./routes/washerRoutes');
 require('dotenv').config();
 const mongoose = require('mongoose');
 
@@ -31,10 +36,14 @@ app.use(express.urlencoded({
 }));
 
 //Routes
-app.get('/', (req,res) => {
-    res.render("Welcome ZaWash")
-});
-// app.use('/', homeRoutes);
+// app.get('/', (req,res) => {
+//     res.render("Welcome ZaWash")
+// });
+app.use('/', loginRoutes);
+app.use('/home', homeRoutes);
+app.use('/washers', washerRoutes);
+app.use('/user', userRoutes);
+app.use('/vehicles', vehicleRoutes);
 
 app.get('*', (req, res) => {
     res.send('The route specified doesnt exist')

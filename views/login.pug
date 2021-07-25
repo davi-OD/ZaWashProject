@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    //- link(rel='stylesheet' href='../public/css/css/bootstrap.min.css')
+    //- link(rel='stylesheet' href='login.css')
+    style 
+      include ../public/css/css/bootstrap.min.css
+      include ../public/css/login.css
+    title ZaWash Login User
+  body
+    .container
+      form(action='/' method='POST')
+        span.userSpan User Log In
+        .username
+          label(for='username') Username:
+          input#user.form-control(type='text' name='username')
+          span.userName
+        .password
+          label(for='password') Password:
+          input#passWord.form-control(type='text' name='password')
+          span.pass-word
+        .button
+          input.btn.btn-danger.btnn(type='button' value='Log In')

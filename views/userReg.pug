@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='./css/bootstrap.min.css')
+    link(rel='stylesheet' href='user.css')
+    title User Register
+  body
+    .container-user
+      form(action='' method='post')
+        span.new_user New User
+        .first-name
+          label(for='first-name') First Name
+          input#fname.form-control(type='text' name='fname')
+          span.first_name
+        .last-name
+          label(for='last-name') Last Name
+          input#lname.form-control(type='text' name='lname')
+          span.last_name
+        .user-name
+          label(for='user-name') User Name
+          input#uname.form-control(type='text' name='username')
+          span.user_name
+        .pass_word
+          label(for='password') Password
+          input#pass-word.form-control(type='password' name='password')
+          span.passWord
+        input.btn.btn-primary.btun(type='button' value='Register')

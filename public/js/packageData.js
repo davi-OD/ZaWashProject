@@ -10,7 +10,7 @@ dropdown.selectedIndex = 0;
 
 // Real inportant code 
 function getPackage(){
-    return fetch("washPackages.json")
+    return fetch("../../washPackages.json")
     .then(response => response.json())
     .then(data => {
         return data
