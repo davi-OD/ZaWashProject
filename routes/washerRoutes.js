@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 const Washer = require('../models/Washer');
 
+//Creating new Washer
 router.get('/washerRegister', (req, res) => {
     res.render('washerReg', {title: 'Register Washer'})
 });
+
 
 router.post('/washerRegister', async (req, res) => {
     try{
@@ -24,7 +26,7 @@ router.get('/', async (req, res) => {
         if (req.query.role) {
             washerInfo = await Washer.find({ role: req.query.role });
         }
-        res.render('washers', {pick: emloyeeInfo, title: 'List of Employees'});
+        res.render('washers', {washer:washerInfo, title: 'List of Washers'});
     }catch(err){
         res.send('Process Failed! No employees retrived');
     }

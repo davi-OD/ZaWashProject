@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
         if (req.query.package) {
             packageWash = await Vehicle.find({ package: req.query.package })
         }
-        res.render('vehicles', {washes: package, title: 'Vehicles'});
+        res.render('vehicles', {wash:packageWash, title: 'Vehicles'});
     }catch(err) {
         res.send('Process failed! No Vehicles Added')
     }

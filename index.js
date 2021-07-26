@@ -49,13 +49,13 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-var loginChecker = function (req, res, next) {
-  if (req.path != '/' &&req.path != '/' && !req.session.user) {
-    res.redirect('/')
-  }
-  next()
-};
-app.use(loginChecker)
+// var loginChecker = function (req, res, next) {
+//   if (req.path != '/' &&req.path != '/' && !req.session.user) {
+//     res.redirect('/')
+//   }
+//   next()
+// };
+// app.use(loginChecker)
 
 //Routes
 app.use('/', loginRoutes);

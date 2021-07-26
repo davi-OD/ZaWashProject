@@ -1,13 +1,10 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    style 
-      include ../public/css/css/bootstrap.min.css
-    title Vehicles
-  body
+extends layout 
+block content
+    .form-row 
+    .col.form-group
+      a(href="/vehicles/vehicleRegister") Add New Vehicle 
+    .pull-right 
+    a(href="/home") Finish
     .form-row
       .col.form-group.col-md-12
         .form-row
@@ -23,12 +20,6 @@ html(lang='en')
                 th Package Of Wash
                 th Assign To
             tbody
-              tr
-                td
-                td
-                td
-                td
-                td
-                td
-                td
-                td
+              //- if washes.length 
+              //- each wash in washes
+              //-   tr 
