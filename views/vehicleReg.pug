@@ -15,7 +15,7 @@ html(lang='en')
     title Vehicle Register
   body
     .container-vehicle
-      form(action='/vehicles/vehicleRegister' method='GET' name='vehicleReg')
+      form(action='/vehicles/vehicleRegister' method='POST' name='vehicleReg')
         .car-plate
           label(for='numberPlate') Number Plate
           input#numPlate.form-control(type='text' name='number_plate')

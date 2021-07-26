@@ -14,7 +14,7 @@ html(lang='en')
 		title Washer Register
 	body
 		.container-washer
-			form(action='/washers/washerRegister' method='GET' name='washerInfo')
+			form(action='/washers/washerRegister' method='POST' name='washerInfo')
 				div(class='name_W')
 					label(for='name') Name
 					input#washeNombre.form-control(type='text' name='washer_name')
@@ -41,7 +41,7 @@ html(lang='en')
 						span#residenceEr.Err
 					.workID
 						label(for='ID') Employment ID
-						input#employmentID.form-control(type='text' name='id')
+						input#employmentID.form-control(type='text' name='work_Id')
 						span#idEr.Err
 				.btn-back
 					button.btn.btn-success(type='submit') Back

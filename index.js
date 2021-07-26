@@ -7,6 +7,13 @@ const vehicleRoutes = require('./routes/vehicleRoutes');
 const washerRoutes = require('./routes/washerRoutes');
 require('dotenv').config();
 const mongoose = require('mongoose');
+const expressSession = require('express-session')({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: false
+});
+const passport = require('passport');
+const User = require('./models/User')
 
 //Instantiations
 const app = express();
@@ -34,15 +41,27 @@ app.use(express.static('public'));
 app.use(express.urlencoded({
     extended: true
 }));
+app.use(expressSession);
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+var loginChecker = function (req, res, next) {
+  if (req.path != '/' &&req.path != '/' && !req.session.user) {
+    res.redirect('/')
+  }
+  next()
+};
+app.use(loginChecker)
 
 //Routes
-// app.get('/', (req,res) => {
-//     res.render("Welcome ZaWash")
-// });
 app.use('/', loginRoutes);
 app.use('/home', homeRoutes);
 app.use('/washers', washerRoutes);
-app.use('/user', userRoutes);
+app.use('/userRegister', userRoutes);
 app.use('/vehicles', vehicleRoutes);
 
 app.get('*', (req, res) => {

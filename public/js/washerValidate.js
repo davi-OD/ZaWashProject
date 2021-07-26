@@ -4,7 +4,7 @@ const genderW = document.washerInfo.gender;
 const birthDate = document.washerInfo.dob;
 const ninID = document.washerInfo.nin;
 const residenceW = document.washerInfo.residence;
-const employID = document.washerInfo.id;
+const employID = document.washerInfo.work_Id;
 
 
 //Regular Expressions

@@ -17,12 +17,9 @@ const washerSchema = new mongoose.Schema({
     residence: {
         type: String
     },
-    washer_name: {
-        type: String
-    },
-    ID: {
+    work_Id: {
         type: String
     }
 });
 
-module.exports = mongoose.model('washerRegister', washerSchema);
+module.exports = mongoose.model('Washer', washerSchema);
