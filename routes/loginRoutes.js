@@ -15,7 +15,7 @@ router.post('/', passport.authenticate('local',
 });
 
 //Ending the session ie Log Out User
-router.get('/logout', (req, res) => {
+router.post('/logout', (req, res) => {
     req.session.destroy(() => {
         res.redirect('/')
     })

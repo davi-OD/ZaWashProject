@@ -1,47 +1,38 @@
 extends layout 
 block content
-	header.card-header
-		h4.card-title Welcome 
-	.form-row
-	.col.form-group
-		a(href='/washers/washerRegister')  Add New Washer
-	.pull-right
-	a(href='/vehicles')  View Order List
-	.form-row
-		.col.form-group.col-md-12   
-			form.search(action='/washers')
-				div.form-row
-					div.col-md-8
-						input.form-control(name='gender' placeholder="Enter your search term(gender) ...")
-					div.col-md-4
-						input.btn.btn-dark.btn-block(type="submit")
-	table.table
-		thead.thead-dark
-			tr
-				th Washer Name
-				th Gender
-				th Date Of Birth
-				th National ID
-				th Residence
-				th Employment ID
-				th
-				th
-			tbody
-				//- if person.length  
-				//- each washer in person
-					tr
-						td #{washer.washer_name}
-						td #{washer.gender}
-						td #{washer.dob}
-						td #{washer.nin}
-						td #{washer.residence}
-						td #{washer.work_Id}
-						td
-							a(href="http://" + washer._id) Update 
-						td 
-							form(method="post" action='/washers/delete')
-								input(type="hidden", placeholder="", name="id", value=washer._id)
-							button.btn.btn-dark.btn-block(type="submit") Delete
-						
+    .form-row 
+    .col.form-group
+      a(href="/washers/washerRegister") Add New Washer
+    .pull-right 
+    a(href="/home") Finish
+    .form-row
+      .col.form-group.col-md-12
+        .form-row
+          table.table
+            thead.thead-dark
+              tr
+                th Washer Name
+                th Gender
+                th Date Of Birth
+                th NIN
+                th Residence
+                th Work ID
+                th 
+                th 
+            tbody
+              if users.length 
+                each user in users
+                    tr 
+                      td #{user.washer_name}
+                      td #{user.gender}
+                      td #{user.dob}
+                      td #{user.nin}
+                      td #{user.residence}
+                      td #{user.work_Id}
 
-
+                      td 
+                        a(href='/washers/update/' + user._id) Update
+                      td 
+                        form(method="post" action='/washers/delete')
+                          input(type="hidden", placeholder="", name="id", value=user._id)
+                          button.btn.btn-dark.btn-block(type="submit") Delete

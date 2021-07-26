@@ -4,31 +4,50 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet' href='./css/bootstrap.min.css')
-    link(rel='stylesheet' href='headerHome.css')
+    //- link(rel='stylesheet' href='./css/bootstrap.min.css')
+    //- link(rel='stylesheet' href='headerHome.css')
+    style 
+      include ../public/css/css/bootstrap.min.css
+      include ../public/font-awesome/css/font-awesome.min.css
+      include ../public/css/headerHome.css
+      
     title ZaWash DashBoard
   body
     header
       .header-container
         .left-nav
-          nav
-            ul
-              li
-                a(href='home.html') Home
-              li
-                a(href='washerReg.html') Washers
-              li
-                a(href='vehicleReg.html') Vehicles
-              li
-                a(href='#') Reports
-              li
-                a(href='#') Books
+          //- nav
+          //-   ul
+          //-     li
+          //-       a(href='home.html') Home
+          //-     li
+          //-       a(href='washerReg.html') Washers
+          //-     li
+          //-       a(href='vehicleReg.html') Vehicles
+          //-     li
+          //-       a(href='#') Reports
+          //-     li
+          //-       a(href='#') Books
         .right-nav
           .add-user
             ul
               li
                 a(href='userReg.html') add user
-          .log-out
-            ul
-              li
-                a(href='login.html') Log Out
+          form(method="post" action='/logout') 
+              button.btn.btn-danger.btn-block.col-lg-5.m-5(type='submit') LOGOUT
+    .side-bar
+      .title
+        .logo ZaWash
+      ul
+        li
+          a(href='/home') Dashboard
+        li
+          a(href='/Washers') Washers 
+        li
+          a(href='/vehicles') Vehicles
+        li
+          a(href='#') Records
+        li
+          a(href='#') Books
+    script 
+      include ../public/js/js/bootstrap.min.js

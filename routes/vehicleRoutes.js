@@ -23,9 +23,29 @@ router.get('/', async (req, res) => {
         if (req.query.package) {
             packageWash = await Vehicle.find({ package: req.query.package })
         }
-        res.render('vehicles', {wash:packageWash, title: 'Vehicles'});
+        res.render('vehicles', {wash: packageWash, title: 'Vehicles'});
     }catch(err) {
         res.send('Process failed! No Vehicles Added')
+    }
+});
+
+//Saving the updated Vehicle Info
+router.post('/update', async (req, res) => {
+    try{
+        await Vehicle.findOneAndUpdate({_id:req.query.id}, req.body)
+        res.redirect('/vehicles');
+    }catch(err) {
+        res.status(404).send("Failed to update item in the database")
+    }
+});
+
+//Deleting a Vehicle
+router.post('/delete', async (req, res) => {
+    try{
+        await Vehicle.deleteOne({_id: req.body.id})
+        res.redirect('back');
+    }catch(err){
+        res.status(400).send('Failed to delete item')
     }
 });
 

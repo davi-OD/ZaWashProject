@@ -20,6 +20,20 @@ block content
                 th Package Of Wash
                 th Assign To
             tbody
-              //- if washes.length 
-              //- each wash in washes
-              //-   tr 
+              if wash.length 
+                each washes in wash
+                    tr 
+                      td #{washes.number_plate}
+                      td #{washes.car_Color}
+                      td #{washes.time}
+                      td #{washes.date}
+                      td #{washes.make_Vehicle}
+                      td #{washes.type_Vehicle}
+                      td #{washes.package}
+                      td #{washes.assign_To}
+                      td 
+                        a(href='/vehicles/update/' + washes._id) Update
+                      td 
+                        form(method="post" action='/vehicles/delete')
+                          input(type="hidden", placeholder="", name="id", value=washes._id)
+                          button.btn.btn-dark.btn-block(type="submit") Delete

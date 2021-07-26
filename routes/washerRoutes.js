@@ -23,14 +23,18 @@ router.post('/washerRegister', async (req, res) => {
 router.get('/', async (req, res) => {
     try{
         let washerInfo = await Washer.find();
-        if (req.query.role) {
-            washerInfo = await Washer.find({ role: req.query.role });
+        if (req.query.nin) {
+            washerInfo = await Washer.find({ nin: req.query.nin });
         }
-        res.render('washers', {washer:washerInfo, title: 'List of Washers'});
+        res.render('washers', {users: washerInfo, title: 'List of Washers'});
     }catch(err){
         res.send('Process Failed! No employees retrived');
     }
 });
+
+// router.get('/update/:id', async (req, res) => {
+
+// })
 
 //Saving the updated Washer Info
 router.post('/update', async (req, res) => {
