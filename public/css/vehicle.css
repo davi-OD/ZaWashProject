@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: auto;
+}
+
+body {
+  height: 60vh;
 }
 
 .container-vehicle {
@@ -13,10 +18,15 @@
   /* background-color: coral; */
 }
 
-.btn-backV,
+button {
+  width: 30rem;
+}
+
 .btn-saveV {
   margin-top: 10px;
   width: 20rem;
+  display: flex;
+  justify-content: center;
 }
 
 .Err {

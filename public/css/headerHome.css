@@ -5,7 +5,7 @@
 }
 
 header {
-  height: 101px;
+  height: 45px;
   z-index: 10;
   position: relative;
   box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
@@ -35,7 +35,7 @@ header {
 .right-nav ul li {
   text-transform: uppercase;
   padding-left: 24px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.1em;
   cursor: pointer;
 }
@@ -75,10 +75,12 @@ body {
 
 .side-bar {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 100vh;
+  /* top: 0;
+  left: 0; */
+  float: left;
+  width: 260px;
+  /* width: 300px; */
+  height: 88vh;
   background: #ecf0f3;
   padding: 12px;
   box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1,
@@ -124,6 +126,48 @@ body {
   border-radius: 6px;
 }
 
-.side-bar.side-bar ul a:hover {
+.side-bar.side-bar ul a:hover,
+.right-nav ul li a:hover {
   color: #3498db;
+}
+
+main {
+  float: right;
+  position: static;
+  height: 800px;
+  width: 1420px;
+  background: #82a5bd;
+}
+
+footer {
+  clear: both;
+  height: 10px;
+  /* width: 1820px; */
+  background: darkred;
+}
+#card-size {
+  width: 400px;
+  padding: 30px;
+  margin-left: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* #card-g {
+  padding: 10px;
+  width: 450px;
+  cursor: pointer;
+  transition: 0.2s;
+} */
+
+#card-size:hover,
+#card-g:hover {
+  transition: ease-in-out 0.5s;
+  transform: scale(1.05);
+}
+.fa-user {
+  position: absolute;
+  padding-left: 18rem;
+  margin-top: -30px;
+  color: #03181d;
 }

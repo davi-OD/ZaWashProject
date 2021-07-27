@@ -8,7 +8,7 @@ html(lang='en')
     //- link(rel='stylesheet' href='headerHome.css')
     style 
       include ../public/css/css/bootstrap.min.css
-      include ../public/font-awesome/css/font-awesome.min.css
+      include ../public/font-awesome/less/icons.less
       include ../public/css/headerHome.css
       
     title ZaWash DashBoard
@@ -29,10 +29,25 @@ html(lang='en')
           //-     li
           //-       a(href='#') Books
         .right-nav
+          .btn-group
+            button.btn.btn-warning(type='button') Quick Tools
+              button.btn.btn-warning.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                span.visually-hidden Toggle Dropdown
+                  ul.dropdown-menu
+                    li
+                      a.dropdown-item(href='#') Action
+                    li
+                      a.dropdown-item(href='#') Another action
+                    li
+                      a.dropdown-item(href='#') Something else here
           .add-user
             ul
+              li 
+                a(href="washers/washerRegister") add washer
+              li  
+                a(href="vehicles/vehicleRegister") add vehicle
               li
-                a(href='userReg.html') add user
+                a(href='userRegister') add user
           form(method="post" action='/logout') 
               button.btn.btn-danger.btn-block.col-lg-5.m-5(type='submit') LOGOUT
     .side-bar
@@ -46,8 +61,116 @@ html(lang='en')
         li
           a(href='/vehicles') Vehicles
         li
-          a(href='#') Records
+          a(href='#') Resources
         li
           a(href='#') Books
+        
+    main 
+      .row.px-4.pt-5
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fa-phone.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fab-users.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fab-users.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fab-users.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fab-users.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fab-users.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fab-users.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fab-users.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+        .cool#card-size
+          .card-body.shadow-lg.rounded
+            h5.card-title 
+              a(href='/employee')
+                i.fa.fab-users.m-3
+              p#dash-number 5
+            h6.card-subtitle.mb-2.text-muted Total Orders  
+      //- .row
+      //-   .col-sm-4#card-g
+      //-     .card
+      //-       .card-body
+      //-         //- h5.card-title Special title treatment
+      //-         //- p.card-text With supporting text below as a natural lead-in to additional content.
+      //-         //- a.btn.btn-primary(href='#') Go somewhere
+      //-   .col-sm-4#card-g
+      //-     .card
+      //-       .card-body
+      //-         //- h5.card-title Special title treatment
+      //-         //- p.card-text With supporting text below as a natural lead-in to additional content.
+      //-         //- a.btn.btn-primary(href='#') Go somewhere
+      //-   .col-sm-4#card-g
+      //-     .card
+      //-       .card-body
+      //-   //-       h5.card-title Special title treatment
+      //-   //-       p.card-text With supporting text below as a natural lead-in to additional content.
+      //-   //-       a.btn.btn-primary(href='#') Go somewhere
+      //-   //- .col-sm-4#card-g
+      //-     .card
+      //-       .card-body
+      //-         //- h5.card-title Special title treatment
+      //-         //- p.card-text With supporting text below as a natural lead-in to additional content.
+      //-         //- a.btn.btn-primary(href='#') Go somewhere
+      //-   .col-sm-4#card-g
+      //-     .card
+      //-       .card-body
+      //-         //- h5.card-title Special title treatment
+      //-         //- p.card-text With supporting text below as a natural lead-in to additional content.
+      //-         //- a.btn.btn-primary(href='#') Go somewhere
+      //-   .col-sm-4#card-g
+      //-     .card
+      //-       .card-body
+      //-         //- h5.card-title Special title treatment
+      //-         //- p.card-text With supporting text below as a natural lead-in to additional content.
+      //-         //- a.btn.btn-primary(href='#') Go somewhere
+        
+        
+    footer 
+       div.col-md-12 © 2022 Davi.
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js' integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF' crossorigin='anonymous')
     script 
       include ../public/js/js/bootstrap.min.js

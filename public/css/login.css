@@ -37,3 +37,10 @@ body {
   margin-top: 10px;
   width: 20rem;
 }
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}

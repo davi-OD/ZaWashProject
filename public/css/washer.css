@@ -12,10 +12,16 @@
   align-items: center;
 }
 
-.btn-back,
+button {
+  width: 30rem;
+}
+
 .btn-save {
   margin-top: 10px;
   width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Err {

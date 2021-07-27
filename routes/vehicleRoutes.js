@@ -29,6 +29,16 @@ router.get('/', async (req, res) => {
     }
 });
 
+//Update call
+router.get('/update/:id', async (req, res) => {
+    try{
+        const updateVehicle = await Vehicle.findOne({_id: req.params.id})
+        res.render('update_vehicle', {wash: updateWasher})
+    }catch(err) {
+        res.status(400).send("Item not found in the database");
+    }
+});
+
 //Saving the updated Vehicle Info
 router.post('/update', async (req, res) => {
     try{

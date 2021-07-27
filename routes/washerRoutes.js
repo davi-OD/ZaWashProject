@@ -32,9 +32,15 @@ router.get('/', async (req, res) => {
     }
 });
 
-// router.get('/update/:id', async (req, res) => {
-
-// })
+//Update Call
+router.get('/update/:id', async (req, res) => {
+    try{
+        const updateWasher = await Washer.findOne({_id: req.params.id})
+        res.render('update_washer', {user: updateWasher})
+    }catch(err) {
+        res.status(400).send("Item not found in the database");
+    }
+});
 
 //Saving the updated Washer Info
 router.post('/update', async (req, res) => {
